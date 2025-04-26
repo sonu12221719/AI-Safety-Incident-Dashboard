@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #FDFDFD 0%, #979797 50%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.App {
+  width: 100vw;
+  padding: 2%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App h1 {
+  text-align: center;
+  color: #34A853;
+  margin-bottom: 2%;
+  font-size: 2rem;
+  
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
+    -1px -1px 2px rgba(255, 255, 255, 0.2);
+}
+
+.main-content {
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.left-section {
+  width: 50%;
+  padding: 4%;
+  padding-top: 0%;
+  margin-left: 2%;
+  margin-right: 2%;
+  background-color: #f1ffe7;
+  border-radius: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 100%;
+  position: relative;
+}
+
+.left-section::-webkit-scrollbar {
+  display: none;
+}
+
+.left-section::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.filters {
+  position: sticky;
+  top: 0;
+  background: #f1ffe7;
+  padding: 1%;
+  padding-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.left-section .input-field {
+  width: 100%;
+  padding: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin-top: 4%;
+  background: #f7f7f7;
+  color: #000407;
+  border: 3px solid #000407;
+  border-radius: 160px;
+}
+
+.left-section .input-field:focus {
+  outline: none;
+  border-color: #4EC7D7;
+}
+
+.left-section select.input-field {
+  padding-right: 40px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 2%;
+  margin: 1% 0;
+  border: none;
+  border-radius: 16px;
+}
+
+.incident-list {
+  margin-top: 2%;
+  overflow-y: hidden;
+  
+}
+
+.incident-card {
+  background-color: #fff;
+  padding: 5%;
+  border-radius: 10px;
+  margin-bottom: 1.5%;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.incident-card h3 {
+  font-size: 22px;
+  width: 70%;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.date span{
+  font-size: 14px;
+  color: #555;
+  font-weight: 600;
+}
+.date {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.severity-div {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  padding: 1% 4%;
+  border: 1.5px solid white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  background: transparent;
+  color: white;
+  font-weight: 500;
+}
+
+.view-link {
+  color: #0c4c94;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.view-link:hover {
+  color: #000407;
+}
+
+.description {
+  margin-top: 2%;
+  font-size: 12px;
+}
+
+.low {
+  background: linear-gradient(to bottom, #A5F48D, #2E7B17);
+}
+
+.medium {
+  background: linear-gradient(to bottom, #EFC547, #BA9423 60%);
+}
+
+.high {
+  background: linear-gradient(to bottom, #FC6A82 0%, #C90022 60%);
+}
+
+/* Right Section */
+.right-section {
+  width: 50%; 
+  padding-left: 2%;
+  padding-right: 4%;
+  max-height: 100%;
+  text-align: center;
+}
+
+.severity-chart-container {
+  background: #f1ffe7;
+  padding: 2%;
+  color: black;
+  border-radius: 20px;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+.severity-heading {
+  text-align: center;
+  color: black;
+  margin-bottom: -5%;
+  font-size: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), -1px -1px 2px rgba(255, 255, 255, 0.2);
+}
+
+.charts {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.charts p{
+  margin-top: -20%;
+}
+
+.chart {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.report-form {
+  background: linear-gradient(to bottom, #F5D98D, #E28566);
+  padding: 4%;
+  padding-left: 10%;
+  padding-right: 10%;
+  border-radius: 20px;
+  color: black;
+}
+
+.report-form .input-field {
+  width: 100%;
+  padding: 2%;
+  color: #555;
+  background-color: #F4F4F4;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn-submit {
+  width: 100%;
+  background: linear-gradient(to bottom, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  padding: 1.5%;
+  border-radius: 10px;
+  margin-top: 2%;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-submit:hover {
+  opacity: 0.9;
+}
+
+.gradient-border {
+  display: inline-block;
+  padding: 2px;
+  border-radius: 16px;
+  background: linear-gradient(to bottom, #4EC7D7, #FF9500);
+}
+
+.custom-dropdown {
+  border: none;
+  outline: none;
+  background: #f7f7f7 url("data:image/svg+xml;utf8,<svg fill='black' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 16px center/18px 18px;
+  border-radius: 14px;
+  padding: 10px 40px 10px 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #222;
+  min-width: 120px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+@media (max-width: 800px) {
+  .main-content {
+    flex-direction: column;
+    padding: 0;
+  }
+  .left-section, .right-section {
+    width: 100%;
+    margin: 0;
+    padding: 3% 2%;
+    max-width: 100%;
+  }
+  .right-section {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .filters {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+  .charts {
+    flex-direction: column;
+    align-items: center;
+  }
+  .chart {
+    margin: 10px 0;
+    width: 180px !important;
+    height: 180px !important;
+  }
+  .chart svg {
+    width: 150px !important;
+    height: 150px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  body, .App {
+    background: #f1ffe7 !important;
+    height: 100%;
+  }
+  .App {
+    padding: 3%;
+  }
+  .App h1 {
+    margin-top: 4%;
+  }
+  .main-content {
+    flex-direction: column;
+    padding: 0;
+  }
+  .left-section, .right-section {
+    width: 100%;
+    margin: 0;
+    padding: 4% 2%;
+    border-radius: 12px;
+    max-width: 100%;
+  }
+  .filters {
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch;
+    padding: 2% 0;
+  }
+  .App h1 {
+    font-size: 1.2rem;
+    margin-bottom: 4%;
+  }
+  .incident-card {
+    padding: 6%;
+    font-size: 0.95rem;
+  }
+  .incident-card h3 {
+    font-size: 1rem;
+    width: 70%;
+  }
+  .severity-div {
+    font-size: 0.8rem;
+    padding: 2% 6%;
+    top: 8%;
+    right: 4%;
+  }
+  .description {
+    font-size: 0.95rem;
+  }
+  .charts {
+    flex-direction: column;
+    align-items: center;
+  }
+  .chart {
+    margin: 10px 0;
+  }
+  .report-form {
+    padding: 6% 4%;
+    border-radius: 12px;
+  }
+  .btn-submit {
+    font-size: 0.95rem;
+    padding: 2%;
+    border-radius: 8px;
+  }
+  .custom-dropdown {
+    font-size: 1rem;
+    padding: 10px 36px 10px 16px;
+    min-width: 100px;
+  }
+  .left-section {
+    max-height: none;
+    overflow-y: visible;
+  }
+  .main-content {
+    overflow: visible;
+  }
+}
