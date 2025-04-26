@@ -2,7 +2,7 @@
 
 This project is a **React + Vite** web application that displays and tracks AI Safety incidents like biased recommendations, hallucinated critical info, and minor data leaks.
 
-![AI Safety Incident Dashboard](./public/Dashboard_image.png)
+![AI Safety Incident Dashboard](./public/Dashboard_image.jpeg)
 
 ## Project Information
 
