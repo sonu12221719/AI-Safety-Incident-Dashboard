@@ -6,10 +6,9 @@ This project is a **React + Vite** web application that displays and tracks AI S
 
 ## Project Information
 
-- **Framework Used**: React 19
-- **Bundler**: Vite 6.3
-- **For displaying Charts**: Recharts
-- **For conformation Notification of submitted new Incident**: React Toastify
+- **Framework Used**: React + Vite
+- **For displaying Charts dependency used**: Recharts
+- **For conformation Notification of submitted new Incident dependency used**: React Toastify
 
 
 ## Steps to install from github and run locally
