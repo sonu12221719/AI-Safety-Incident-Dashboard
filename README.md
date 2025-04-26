@@ -1,12 +1,66 @@
-# React + Vite
+# AI Safety Incident Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **React + Vite** web application that displays and tracks AI Safety incidents like biased recommendations, hallucinated critical info, and minor data leaks.
 
-Currently, two official plugins are available:
+![AI Safety Incident Dashboard](./public/Dashboard_image.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Information
 
-## Expanding the ESLint configuration
+- **Framework Used**: React 19
+- **Bundler**: Vite 6.3
+- **For displaying Charts**: Recharts
+- **For conformation Notification of submitted new Incident**: React Toastify
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Steps to install from github and run locally
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/sonu12221719/AI-Safety-Incident-Dashboard.git
+   cd AI-Safety-Incident-Dashboard
+   ```
+   
+2. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**:
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**:
+
+   ```bash
+   npm run build
+   ```
+
+**Hosted link of this project**:
+[https://sonu12221719.github.io/AI-Safety-Incident-Dashboard/](https://sonu12221719.github.io/AI-Safety-Incident-Dashboard/)
+
+**Figma Link**:
+https://www.figma.com/design/tgC5j52NSpgghFcKrnt3KL/AI-incident-safety-dashboard?node-id=0-1&p=f&t=A0mTXU0s15Lmc9aj-0
+
+## Project Structure
+
+```
+src/
+  ├── components/
+      ├── Filters.jsx
+      ├── IncidentList.jsx
+      ├── ReportForm.jsx
+      ├── SeverityChart.jsx
+  ├── App.css
+  ├── App.jsx
+  ├── index.css
+  ├── main.jsx
+public/
+  ├── favicon.ico
+index.html
+vite.config.js
+package.json
+```
